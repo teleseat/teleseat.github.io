@@ -1,0 +1,43 @@
+.usecasesMenu {
+    &.header {
+        padding: 40px 45px 60px !important;
+    }
+    &:not(.header) {
+        .usecasesMenuItem {
+            --background: var(--ion-color-step-900);
+        }
+        .usecasesMenuCol:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        .usecasesHeaderItem {
+            --padding-start: 0;
+            --inner-padding-end: 0;
+        }
+    }
+}
+
+.usecasesHeaderItem {
+    --padding-start: 30px;
+    --inner-padding-end: 38px;
+}
+
+.usecasesMenuItem {
+    --padding-start: 30px;
+    --inner-padding-end: 38px;
+    --padding-top: 15px;
+    --padding-bottom: 25px;
+    border-left: 3px solid var(--ion-color-white);
+
+    &.menu-title {
+        color: var(--ion-color) !important;
+    }
+
+    &.selected,
+    &:hover {
+        border-left: 3px solid var(--ts-color-dirty-green);
+
+        .menu-title {
+            color: var(--ts-color-dirty-green) !important;
+        }
+    }
+}

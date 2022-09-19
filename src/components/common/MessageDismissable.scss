@@ -1,0 +1,27 @@
+.messageDismissable {
+    background: var(--ion-color-white);
+    border: 1px solid var(--ion-color-step-700);
+    border-radius: 4px;
+    padding: 5px 16px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    position: relative;
+
+    &.noDismiss {
+        padding: 16px;
+
+        .ts-icon {
+            margin-top: 2px !important;
+        }
+    }
+
+    &--label {
+        flex-grow: 1;
+    }
+
+    &--close,
+    &--pinIcon {
+        flex-shrink: 0;
+    }
+}

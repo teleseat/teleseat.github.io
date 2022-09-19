@@ -1,0 +1,32 @@
+.TT {
+    &-content {
+        background: rgba(var(--ion-color-dark-rgb),.75);
+        border-radius: 4px;
+        padding: 3px 6px;
+        font-size: 11px;
+        color: var(--ion-color-light);
+        max-width: 300px;
+        text-align: center;
+
+        &.large {
+            padding: 10px 16px;
+            border-radius: 12px;
+        }
+
+        &.primary {
+            background: rgba(var(--ion-color-primary-rgba),.5);
+        }
+        &.danger {
+            background: rgba(var(--ion-color-danger-rgba),.5);
+        }
+        &.light {
+            background: var(--ion-color-white);
+            color: var(--ion-color-step-200);
+            box-shadow: var(--ts-box-shadow);
+        }
+    }
+    &-invokeBtn {
+        display: inline-block;
+        position: relative;
+    }
+}

@@ -1,0 +1,660 @@
+@import "../../app/variables";
+
+.form {
+    &-inputGroup {
+        --background: transparent;
+        --background-hover: transparent;
+        --background-focused: transparent;
+        --background-activated: transparent;
+        --padding-start: 17px;
+        --padding-bottom: 0;
+        --inner-padding-end: 17px;
+        // margin-bottom: 13px;
+        &.labelOnly {
+            --min-height: 15px;
+            --padding-bottom: 6px;
+
+            .form-label {
+                font-size: 14px !important;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        &.disabled {
+            opacity: .6;
+
+            .form-controlText,
+            .form-radioItem {
+                cursor: not-allowed;
+            }
+        }
+
+        &.reorder-selected {
+            box-shadow: none !important;
+        }
+    }
+    &-groupRow {
+        @media only screen and (min-width: $md) {
+            .form-col:not(:first-child) {
+                padding-left: 16px;
+            }
+            .form-col:not(:last-child) {
+                padding-right: 16px;
+            }
+        }
+    }
+    &-col {
+        padding: 0;
+    }
+    &-label {
+        white-space: pre-wrap !important;
+        &.label-floating {
+            font-size: 14px !important;
+            transform: translate3d(0, 50%, 0) !important;
+        }
+        &:not(.form-labelCheckbox) {
+            font-weight: bold;
+        }
+        &Checkbox {
+            margin: 0 0 0 22px;
+            font-size: 14px !important;
+        }
+    }
+    &-control {
+        font-size: 14px;
+        --background: var(--ion-color-white);
+        background: var(--ion-color-white);
+        --padding-start: 15px !important;
+        --padding-end: 15px !important;
+        &.error {
+            --background: var(--ion-color-danger-light);
+            background: var(--ion-color-danger-light);
+            border-color: var(--ion-color-danger-light) !important;
+        }
+        &.line {
+            border-radius: 4px;
+            border: 1px solid var(--ion-color-step-700);
+        }
+        &.floatingLabel {
+            margin-top: 16px;
+        }
+        &.actionBtnStart {
+            --padding-start: 48px !important;
+        }
+        &.actionBtnEnd {
+            --padding-end: 48px !important;
+        }
+        &Text{
+            height: var(--ts-input-height);
+            border-radius: var(--ts-input-border-radius);
+
+        }
+        &Textarea {
+            border-radius: var(--ts-input-border-radius);
+
+            .textarea-wrapper {
+                height: auto !important;
+            }
+            textarea {
+                min-height: var(--ts-textarea-height);
+                resize: vertical;
+                line-height: 25px;
+                padding: 20px 20px 70px;
+            }
+
+            &.small {
+                textarea {
+                    min-height: 92px;
+                }
+            }
+
+            &.max {
+                textarea {
+                    max-height: 200px;
+                }
+            }
+        }
+        &Select {
+            height: var(--ts-input-height);
+            border-radius: var(--ts-select-border-radius);
+            border: 1px solid var(--ion-color-step-700);
+        }
+        &Options {
+            .item {
+                --inner-border-width: 0 !important;
+            }
+            .in-item {
+                width: var(--ts-radio-height) !important;
+                height: var(--ts-radio-height) !important;
+                background: var(--ion-color-white);
+                --border-width: 0px;
+                border-radius: var(--ts-radio-border-radius);
+                box-shadow: var(--ts-radio-box-shadow);
+                --color-checked: var(--ion-color-primary);
+            }
+            .popover-content {
+                min-width: 15rem;
+            }
+        }
+    }
+    &-actionBtn {
+        &.actionBtnStart, &.actionBtnEnd {
+            position: absolute;
+            top: 14px;
+            z-index: 10;
+            font-size: 14px;
+        }
+        &.actionBtnStart {
+            left: 15px;
+        }
+        &.actionBtnEnd {
+            right: -15px;
+        }
+    }
+    &-radio {
+        width: var(--ts-radio-height);
+        height: var(--ts-radio-height);
+        --border-width: 0px;
+        background: var(--ion-color-white);
+        border-radius: var(--ts-radio-border-radius);
+        box-shadow: var(--ts-radio-box-shadow);
+        --color-checked: var(--ion-color-primary);
+    }
+    &-radioGroup {
+        &.row {
+            .form-radioGroupList {
+                flex-flow: row;
+                display: flex;
+            }
+            .form-radioItem {
+                flex-grow: 1;
+            }
+        }
+    }
+    &-radioGroupList {
+        background: var(--ion-color-primary-faint);
+        border-radius: 4px;
+        padding: 10px;
+
+
+    }
+    &-radioItem {
+        --background: transparent;
+        --padding-top: 12px;
+        --padding-start: 12px;
+        --inner-padding-end: 12px;
+        --padding-bottom: 12px;
+
+        &.selected {
+            background: var(--ion-color-primary-light);
+        }
+    }
+    &-checkbox {
+        width: var(--ts-checkbox-height);
+        height: var(--ts-checkbox-height);
+        --border-width: 0;
+        --background-checked: var(--ion-color-white);
+        --checkmark-color: var(--ion-color-primary);
+        border-radius: var(--ts-checkbox-border-radius);
+        background: var(--ion-color-white);
+        box-shadow: var(--ts-checkbox-box-shadow);
+        padding: 3px;
+        margin: 10px 0;
+        flex-shrink: 0;
+    }
+    &-checkboxList {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 4px;
+
+        &:not(.clear) {
+            background: var(--ion-color-primary-faint);
+        }
+    }
+    &-checkboxGroup {
+        &.disabled {
+            cursor: not-allowed;
+        }
+    }
+    &-checkboxCard {
+        flex-grow: 1;
+        min-width: 50%;
+        padding: 15px;
+
+        &.rowTrimmed {
+            padding: 0 15px;
+        }
+
+        &:hover:not(.disabled) {
+            background: var(--ion-color-primary-light);
+        }
+
+        &.iconPrimary {
+            .form-checkboxIcon {
+                fill: var(--ion-color-primary);
+            }
+        }
+        &.iconLarge {
+            .form-checkboxIcon {
+                width: 24px !important;
+                height: 24px !important;
+            }
+        }
+    }
+    &-submitActions {
+        justify-content: flex-end;
+        width: 100%;
+    }
+    &-error {
+        --background: transparent;
+        --background-hover: transparent;
+        --background-focused: transparent;
+        --min-height: 1rem;
+        font-size: 13px;
+        color: var(--ion-color-danger);
+
+        &Label {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    &-topicsCard {
+        box-shadow: none;
+        margin: 10px 0 0;
+        padding: 20px 16px;
+        border: 1px solid var(--ion-color-step-700);
+        min-height: 90px;
+        cursor: text;
+    }
+    &-topic {
+        padding: 0 0 0 8px;
+        height: 24px;
+    }
+    &-topicsInput {
+        input {
+            padding: 0 !important;
+            height: 16px;
+        }
+    }
+    &-topic + &-topicsInput {
+        margin-top: 10px;
+    }
+    &-floatIcon {
+        position: absolute;
+        right: 15px;
+        z-index: 10;
+    }
+    &-select {
+        cursor: pointer;
+        --padding-start: 14px;
+        --inner-padding-end: 10px;
+        --background: transparent !important;
+        background: transparent !important;
+        border-radius: var(--ts-input-border-radius);
+        --min-height: calc(var(--ts-input-height) - 2px);
+
+        &.default {
+            --background: var(--ion-color-white) !important;
+            background: var(--ion-color-white) !important;
+            border: 1px solid var(--ion-color-step-700);
+        }
+        &.error {
+            --background: var(--ion-color-danger-light) !important;
+            background: var(--ion-color-danger-light) !important;
+            border-color: var(--ion-color-danger-light) !important;
+        }
+        &.disabled {
+            cursor: not-allowed;
+            opacity: .6;
+        }
+    }
+    &-selectPanel {
+        --backdrop-opacity: 0 !important;
+        --box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.07), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        .popover-content {
+            min-width: 250px;
+            width: fit-content;
+        }
+    }
+    &-selectItemList {
+        width: auto !important;
+    }
+    &-selectItem {
+        cursor: pointer;
+        border-radius: 4px;
+        --min-height: 40px;
+
+        &.selected {
+            background: var(--ion-color-primary-light);
+            --background: var(--ion-color-primary-light);
+        }
+
+        &:hover {
+            background: var(--ion-color-primary-faint);
+            --background: var(--ion-color-primary-faint);
+        }
+
+        &.large {
+            --padding-start: 15px;
+            --inner-padding-end: 15px;
+            --padding-top: 15px;
+            --padding-bottom: 15px;
+            min-height: 102px;
+            --height: 102px;
+        }
+    }
+
+    &-selectLabel {
+        max-width: 350px;
+    }
+
+    &-selectInputWithActionBtn {
+        width: calc(100% - 40px);
+    }
+
+    &-controlDateTimePicker {
+        height: var(--ts-input-height);
+        width: 100%;
+        padding: 10px 15px 10px 45px;
+        outline: none !important;
+    }
+    &-dateTimePickerWrapper {
+        position: relative;
+    }
+    &-dateTimePickerIcon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    &-fileItem {
+        position: relative;
+
+        &.fileUploader {
+            width: 100%;
+            height: 200px;
+
+            .form-fileItemWrapper {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &-previewInput {
+        padding-right: 90px !important;
+    }
+
+    &-fileCancelBtn {
+        width: 26px !important;
+        height: 26px !important;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    &-fileCancelBtnRight {
+        width: 26px !important;
+        height: 26px !important;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &-fileUpdateBtn {
+        height: 100% !important;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 10;
+        --border-radius: 0 4px 4px 0 !important;
+    }
+
+    &-imageItem {
+        position: relative;
+        &.fileUploader {
+            .form-imageItemWrapper {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &.banner {
+            &.filePreviewer {
+                .form-imageItemWrapper {
+                    padding-top: calc(1 / 4 * 100%);
+                    height: 0 !important;
+                    width: 100%;
+                }
+                .form-imagePreview {
+                    position: absolute;
+                    object-fit: contain;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                }
+                .form-imageUpdateBtn {
+                    position: absolute;
+                    right: 15px;
+                    bottom: 15px;
+                    margin-top: 0;
+                    --ion-color-base: var(--ion-color-light) !important;
+                    --background: var(--ion-color-dark) !important;
+                    background: var(--ion-color-dark) !important;
+                    border-radius: 10px;
+                    --border-width: 0 !important;
+                }
+            }
+            &.fileUploader {
+                padding-top: calc(2 / 5 * 100%);
+                height: 0 !important;
+                width: 100%;
+            }
+        }
+        &.logo {
+            &.filePreviewer {
+                .form-imagePreview {
+                    object-fit: scale-down;
+                    height: 200px;
+                    width: 350px;
+                }
+            }
+            &.fileUploader {
+                height: 200px;
+                width: 350px;
+            }
+        }
+        &.avatar {
+            &.filePreviewer {
+                .form-imageItemWrapper {
+                    display: flex;
+                }
+                .form-imagePreview {
+                    object-fit: cover;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                }
+                &.small {
+                    .form-imagePreview {
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+            }
+            &.fileUploader {
+                width: 200px;
+                height: 160px;
+
+                &.small {
+                    width: 200px;
+                    height: 70px;
+                }
+            }
+        }
+        &.video {
+            &.filePreviewer {
+                .form-imagePreview {
+                    object-fit: scale-down;
+                    height: 200px;
+                    width: 350px;
+                }
+            }
+            &.fileUploader {
+                height: 200px;
+                width: 350px;
+            }
+        }
+
+        .form-imagePreview {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--ion-color-step-700);
+            overflow: hidden;
+        }
+    }
+
+    &-lockIcon {
+        fill: var(--ion-color-step-700) !important;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    &-trackList {
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+    &-trackItem {
+        display: inline-block;
+        width: fit-content;
+        height: 36px;
+        padding: 0 6px 0 12px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        margin: 6px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &-colorPicker {
+        height: 50px;
+        padding: 5px 20px;
+        overflow: scroll;
+        flex-wrap: nowrap;
+    }
+
+    &-colorPickerPatch {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        flex-shrink: 0;
+
+        &.default {
+            border: var(--ts-border)
+        }
+
+        &.selected {
+            border: 2px solid var(--ion-color-primary);
+        }
+
+        &.light {
+            .form-colorPickerCheck {
+                fill: var(--ion-color-step-200);
+            }
+        }
+
+        &.dark {
+            .form-colorPickerCheck {
+                fill: var(--ion-color-white);
+            }
+        }
+    }
+
+
+    &-iconSelector {
+        height: 80px;
+        max-width: 368px;
+        margin: 5px auto;
+        padding: 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &-iconSelectorItem {
+        width: 80px !important;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        flex-shrink: 0;
+        border: var(--ts-border);
+        background: var(--ion-color-white);
+
+        &.selected {
+            border: 2px solid var(--ion-color-primary);
+        }
+    }
+
+    &-slidesNavBtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 34px !important;
+        height: 34px !important;
+
+        &.prev {
+            left: -58px;
+        }
+
+        &.next {
+            right: -58px;
+        }
+    }
+
+    &-deleteMemberBtn {
+        width: 40px;
+    }
+
+}
+
+.native-input[disabled] {
+    cursor: not-allowed;
+}
+
+// Hide number spinner
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}

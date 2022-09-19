@@ -1,0 +1,31 @@
+// Space Colors
+$spaceColorDictionary: (
+    "default": #00b9ff,
+    "brickRed": #d64853,
+    "pastelPurple": #9f6adc,
+    "aquamarine": #64c1ac,
+    "uclaBlue": #5170a1,
+    "tealBlue": #2c6084,
+    "mikadoYellow": #ffc90c,
+    "pastelBlue": #a7bfcb,
+    "liver": #4f4f4f,
+    "yellowOrange": #ffae35,
+);
+
+@mixin spaceColorBackgrounds {
+    @each $theme, $color in $spaceColorDictionary {
+        #{"&."}#{$theme}{
+            --background: #{$color};
+            background: #{$color};
+            --opacity: 1;
+        }
+    }
+}
+
+@mixin spaceColorTheme($prop) {
+    @each $theme, $color in $spaceColorDictionary {
+        #{"&."}#{$theme}{
+            #{$prop}: #{$color} !important;
+        }
+    }
+}

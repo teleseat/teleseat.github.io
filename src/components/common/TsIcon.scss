@@ -1,0 +1,69 @@
+.ts-icon {
+    &Wrapper {
+        width: 36px;
+        height: 36px;
+        background: var(--ion-color-white);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &.glyph {
+        fill: var(--ion-color-step-500);
+        overflow: visible;
+    }
+    &.flip {
+        transform: rotateZ(180deg);
+    }
+    &.rotate90 {
+        transform: rotateZ(90deg);
+    }
+    &.rotate270 {
+        transform: rotateZ(270deg);
+    }
+    &.bg {
+        background: var(--ion-color-primary-faint);
+    }
+    &.bgLight {
+        background: var(--ion-color-white);
+    }
+    &.round {
+        border-radius: 50%;
+    }
+    &.drop {
+        flex-shrink: 0;
+        border-radius: 50%;
+        box-shadow: var(--ts-box-shadow);
+    }
+    &.primary {
+        fill: var(--ion-color-primary) !important;
+
+        &.bg {
+            background: var(--ion-color-primary-light);
+        }
+    }
+    &.success {
+        fill: var(--ion-color-success) !important;
+        * {
+            fill: var(--ion-color-success) !important;
+        }
+    }
+    &.medium {
+        fill: var(--ion-color-medium);
+        &.bg {
+            background: var(--ion-color-step-700);
+        }
+    }
+    &.light {
+        fill: var(--ion-color-white) !important;
+    }
+    &.danger {
+        fill: var(--ion-color-danger) !important;
+        &.bg {
+            background: var(--ion-color-danger-light);
+        }
+    }
+    &.dark {
+        fill: var(--ion-color) !important;
+    }
+}

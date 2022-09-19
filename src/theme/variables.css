@@ -1,0 +1,227 @@
+/* Ionic Variables and Theming. For more info, please see:
+http://ionicframework.com/docs/theming/ */
+
+/** Ionic CSS Variables **/
+:root {
+    /** primary **/
+    --ion-color-primary: #00B9FF;
+    --ion-color-primary-rgb: 79,184,249;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #46a2db;
+    --ion-color-primary-tint: #61bffa;
+    --ion-color-primary-light: #EDF8FE;
+    --ion-color-primary-faint: #F8FAFA;
+
+    /** secondary **/
+    --ion-color-secondary: #36414e;
+    --ion-color-secondary-rgb: 54,65,78;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255,255,255;
+    --ion-color-secondary-shade: #303945;
+    --ion-color-secondary-tint: #4a5460;
+
+    /** tertiary **/
+    --ion-color-tertiary: #75ffca;
+    --ion-color-tertiary-rgb: 117, 255, 202;
+    --ion-color-tertiary-contrast: #333333;
+    --ion-color-tertiary-contrast-rgb: 51, 51, 51;
+    --ion-color-tertiary-shade: #67e0b2;
+    --ion-color-tertiary-tint: #83ffcf;
+
+    /** success **/
+    --ion-color-success: #6FE048;
+    --ion-color-success-rgb: 111,224,72;
+    --ion-color-success-contrast: #ffffff;
+    --ion-color-success-contrast-rgb: 255, 255, 255;
+    --ion-color-success-shade: #86D86A;
+    --ion-color-success-tint: #7de35a;
+
+    /** warning **/
+    --ion-color-warning: #ffc409;
+    --ion-color-warning-rgb: 255, 196, 9;
+    --ion-color-warning-contrast: #000000;
+    --ion-color-warning-contrast-rgb: 0, 0, 0;
+    --ion-color-warning-shade: #e0ac08;
+    --ion-color-warning-tint: #ffca22;
+
+    /** danger **/
+    --ion-color-danger: #eb445a;
+    --ion-color-danger-rgb: 235, 68, 90;
+    --ion-color-danger-contrast: #ffffff;
+    --ion-color-danger-contrast-rgb: 255, 255, 255;
+    --ion-color-danger-shade: #db6767;
+    --ion-color-danger-tint: #ed576b;
+    --ion-color-danger-light: #FBF0F0;
+
+    /** dark **/
+    --ion-color-dark: #272727;
+    --ion-color-dark-rgb: 39,39,39;
+    --ion-color-dark-contrast: #ffffff;
+    --ion-color-dark-contrast-rgb: 255,255,255;
+    --ion-color-dark-shade: #222222;
+    --ion-color-dark-tint: #3d3d3d;
+
+    /** medium **/
+    --ion-color-medium: #828282;
+    --ion-color-medium-rgb: 130,130,130;
+    --ion-color-medium-contrast: #000000;
+    --ion-color-medium-contrast-rgb: 0,0,0;
+    --ion-color-medium-shade: #727272;
+    --ion-color-medium-tint: #8f8f8f;
+
+    /** light **/
+    --ion-color-light: #f8f8f8;
+    --ion-color-light-rgb: 248,248,248;
+    --ion-color-light-contrast: #000000;
+    --ion-color-light-contrast-rgb: 0,0,0;
+    --ion-color-light-shade: #dadada;
+    --ion-color-light-tint: #f9f9f9;
+
+    /** gray **/
+    --ion-color-black: #000000;
+    --ion-color-step-100: #272727;
+    --ion-color-step-200: #333333;
+    --ion-color-step-300: #544A4A;
+    --ion-color-step-400: #828282;
+    --ion-color-step-500: #afafaf;
+    --ion-color-step-600: #c4c4c4;
+    --ion-color-step-700: #e9e9e9;
+    --ion-color-step-800: #f2f5f6;
+    --ion-color-step-900: #f8f8f8;
+    --ion-color-white: #fff;
+
+    /** text color */
+    --ion-color: var(--ion-color-step-200);
+    --color: var(--ion-color-step-200);
+
+    /** EventCo Custom Colors **/
+    --ts-color-darkGray: #3f4853;
+    --ts-color-darkBlue: #265371;
+    --ts-color-linkedin: #0077B5;
+    --ts-color-facebook: #3B5998;
+    --ts-color-google: #4285F4;
+    --ts-color-twitter: #1da1f2;
+    --ts-color-dirty-green: #7A997B;
+    --ts-color-dirty-green-dark: #7B997C;
+    --ts-color-dirty-green-light: #e3ede3;
+    --ts-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.04), 0px 1px 0px rgba(0, 0, 0, 0.03);
+    --ts-border: 1px solid var(--ion-color-step-700);
+
+    /**Space Colors **/
+    --ts-space-default: #f8fafa;
+
+    /* std dimensions | Mobile first */
+    --ion-grid-width-xl: 1440px;
+    --ion-grid-width-lg: 100%;
+    --ion-grid-width-md: 100%;
+    --ion-grid-width-sm: 100%;
+    --ion-grid-width-xs: 100%;
+    --ts-header-height: 50px;
+    --ts-header-height-secondary: 70px;
+    --ts-footer-height: 48px;
+    --ts-footer-height-lg: 98px;
+    --ts-sidebar-width: 264px;
+    --ts-sidebar-width-collapsed: 60px;
+    --ts-sidebar-width-extension: 360px;
+    --hero-height: 300px;
+    --ts-home-width: 1280px;
+    /* input */
+    --ts-form-max-width: 715px;
+    --ts-form-max-width-free: 615px;
+    --ts-input-height: 40px;
+    --ts-textarea-height: 80px;
+    --ts-input-border-radius: 4px;
+    /* select */
+    --ts-select-border-radius: 6px;
+    /* checkbox */
+    --ts-checkbox-height: 24px;
+    --ts-checkbox-border-radius: 6px;
+    --ts-checkbox-border-width: 0;
+    --ts-checkbox-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+    /* radio */
+    --ts-radio-height: 24px;
+    --ts-radio-border-radius: 50%;
+    --ts-radio-border-width: 0;
+    --ts-radio-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+    --input-height: 2rem;
+    --ts-margin-inline-start: 2px;
+    --ts-margin-inline-end: 2px;
+    /* button */
+    --ts-button-height-large: 45px;
+    --ts-button-height: 40px;
+    --ts-button-small: 30px;
+    --ts-button-tiny: 24px;
+    --ts-button-border-radius: 10px;
+    --ts-button-outline-border-width: 1px;
+    /* segment */
+    --ts-segment-outer-height: 42px;
+    --ts-segment-border-radius: 10px;
+    /* min width for interact panel small screen */
+    --ts-present-panel-width: 100%;
+    /* interact panel small screen */
+    --ts-interact-panel-margin: 10px;
+    --ts-interact-panel-height: calc(55vh - var(--ts-header-height) - 10px);
+    --ts-interact-panel-collapsed-width: 100%;
+    --ts-interact-panel-width: 100%;
+    --ts-interact-panel--header-height: 48px;
+    --ts-interact-panel-padding-start: 25px;
+    --ts-interact-panel-padding-end: 20px;
+    --ts-interact-panel-button-height: 38px;
+    /* present panel small screen */
+    --ts-present-panel-height: calc(100vh - var(--ts-header-height) - 10px);
+    /* Poll card */
+    --ts-poll-card-padding: 22px;
+    /** EventCo Custom Fonts **/
+    --ion-font-family: Inter, Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Medium Screen*/
+@media screen and (min-width: 768px) {
+    :root {
+        --ts-header-height-secondary: 58px;
+        --ts-footer-height: 58px;
+        --ts-sidebar-width: 220px;
+        --ts-sidebar-width-expanded: 528px;
+        --ts-margin-inline-start: 6px;
+        --ts-margin-inline-end: 6px;
+        /* min width for interact panel larger than medium */
+        --ts-present-panel-width: 60%;
+        /* interact panel larger than medium */
+        --ts-interact-panel-height: calc(100vh - var(--ts-header-height) - 10px);
+        --ts-interact-panel-width: 280px;
+        --ts-interact-panel-collapsed-width: 44px;
+        --ts-interact-panel-header-height: 58px;
+        --ts-interact-panel-padding-start: 15px;
+        --ts-interact-panel-padding-end: 10px;
+        --ts-interact-panel-button-height: 44px;
+        --ts-interact-panel-button-margin: 12px;
+        /* height for present panel larger than medium */
+        --ts-present-panel-height: calc(100vh - var(--ts-header-height) - 10px);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    :root {
+        --ts-margin-inline-start: 12px;
+        --ts-margin-inline-end: 12px;
+        --ts-header-height-secondary: 68px;
+        --ts-footer-height: 60px;
+        --ts-sidebar-width: 260px;
+        --ts-sidebar-width-expanded: 624px;
+        /* interact panel large screens */
+        --ts-interact-panel-width: 380px;
+        --ts-interact-panel-collapsed-width: 64px;
+        --ts-interact-panel-header-height: 68px;
+        --ts-interact-panel-padding-start: 25px;
+        --ts-interact-panel-padding-end: 20px;
+        --ts-interact-panel-button-height: 48px;
+        --ts-interact-panel-button-margin: 22px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    :root {
+        --ts-home-width: 1400px;
+    }
+}

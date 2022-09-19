@@ -1,0 +1,120 @@
+@import './mixins';
+
+.AH {
+    &-toolbar {
+        --min-height: var(--ts-header-height);
+        height: var(--ts-header-height);
+        --padding-start: 17px;
+        --padding-end: 17px;
+        --border-width: 0 !important;
+
+        @include spaceColorBackgrounds();
+    }
+    &.header-md {
+        box-shadow: none;
+        &::after {
+            background-image: none;
+        }
+    }
+    &-toggleBtn {
+        width: 40px;
+        height: 40px;
+        --padding-start: 0;
+        --padding-end: 0;
+        --background: var(--ion-color-step-800) !important;
+        --background-hover: var(--ion-color-step-800) !important;
+        --background-active: var(--ion-color-step-800) !important;
+    }
+    &-brand {
+        --detail-icon-opacity: 0 !important;
+        display: flex;
+        align-items: center;
+    }
+    &-alertBadge {
+        position: absolute;
+        top: 2px;
+        right: 6px;
+    }
+    &-avatar {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        background: var(--ion-color-step-900);
+        color: var(--ion-color-light);
+        min-width: 2rem !important;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid var(--ion-color-white);
+        overflow: hidden;
+        cursor: pointer;
+        h3 {
+            margin: 0;
+        }
+    }
+    &-navLabel {
+        text-transform: initial;
+    }
+    &-profileBtn {
+        height: fit-content !important;
+        width: fit-content;
+        margin-right: 0 !important;
+        margin-left: 32px !important;
+        --padding-end: 0 !important;
+        --padding-start: 0 !important;
+        border-radius: 10px !important;
+    }
+    &.homePageHeader {
+        .AH-toolbar {
+            --min-height: 75px;
+            height: 75px;
+        }
+        &.blue {
+            background: var(--ion-color-primary);
+        }
+        &.faint-blue {
+            background: #F2F7FA;
+        }
+        &.header-md {
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+        }
+        > .AH-toolbar {
+            --background: transparent;
+        }
+    }
+    &-notification {
+        width: 12px;
+        height: 12px;
+        background: var(--ion-color-primary);
+        border: 2px solid var(--ion-color-white);
+        display: inline-block;
+        border-radius: 50%;
+        position: absolute;
+        top: 6px;
+        right: 4px;
+        box-sizing: content-box;
+    }
+
+    &-divider {
+        display: inline-block;
+        width: 1px;
+        height: 32px;
+        background: var(--ion-color-step-600);
+        margin: 0 20px;
+    }
+
+    &-eventBrand {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.homePage--header {
+    display: flex;
+    width: 100%;
+    max-width: var(--ts-home-width);
+    margin: 0 auto;
+    height: 100%;
+    justify-content: space-between;
+}
